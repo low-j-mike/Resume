@@ -8,7 +8,7 @@ $(function(){
 	
 	var loader = new  THREE.ColladaLoader();
 	loader.options.convertUpAxis = false;
-	loader.load('resume.dae', function (collada){
+	loader.load('resume centered.dae', function (collada){
 		dae = collada.scene;
 		dae.scale.x = dae.scale.y = dae.scale.z = 3;
 		dae.traverse(function (child){
