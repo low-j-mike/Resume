@@ -8,7 +8,7 @@ $(function(){
 	
 	var loader = new  THREE.ColladaLoader();
 	loader.options.convertUpAxis = false;
-	loader.load('resume centered.dae', function (collada){
+	loader.load('resume fix.dae', function (collada){
 		dae = collada.scene;
 		dae.scale.x = dae.scale.y = dae.scale.z = 3;
 		dae.traverse(function (child){
@@ -142,8 +142,8 @@ $(function(){
 		/*stats*/
 		stats = new Stats();		
 		stats.domElement.style.position = 'absolute';
-		stats.domElement.style.left = '0px';
-		stats.domElement.style.top = '0px';		
+		stats.domElement.style.left = '10000px';
+		stats.domElement.style.top = '10000px';		
 		$("#webGL-container").append( stats.domElement );		
 	}
 
